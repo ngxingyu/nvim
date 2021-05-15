@@ -1,34 +1,37 @@
-local execute = vim.api.nvim_command
-local fn = vim.fn
-local g = vim.g
+require('globals') -- Create global lua table
+require('settings') -- bunch of configs
+require('plugins') -- entrypoint for plugins
+require('config') -- All plugin configurations
+require('mappings') -- shortcuts
 
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
-if fn.empty(fn.glob(install_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-  execute "packadd packer.nvim"
-end
+require('lsp') -- LSP configs
+require('lsp.lua-ls')
+require('lsp.efm-ls')
+-- require('lsp.efm-general-ls')
+-- require('lsp.angular-ls')
+-- require('lsp.bash-ls')
+-- require('lsp.clangd')
+-- require('lsp.css-ls')
+-- require('lsp.dart-ls')
+-- require('lsp.docker-ls')
+-- require('lsp.elm-ls')
+-- require('lsp.emmet-ls')
+-- require('lsp.graphql-ls')
+-- require('lsp.go-ls')
+-- require('lsp.html-ls')
+-- require('lsp.json-ls')
+-- require('lsp.js-ts-ls')
+-- require('lsp.kotlin-ls')
+-- require('lsp.latex-ls')
+-- require('lsp.php-ls')
+-- require('lsp.python-ls')
+-- require('lsp.ruby-ls')
+-- require('lsp.rust-ls')
+-- require('lsp.svelte-ls')
+-- require('lsp.terraform-ls')
+-- require('lsp.tailwindcss-ls')
+-- require('lsp.vim-ls')
+-- require('lsp.vue-ls')
+-- require('lsp.yaml-ls')
 
---- Check if a file or directory exists in this path
-local function require_plugin(plugin)
-    local plugin_prefix = fn.stdpath("data") .. "/site/pack/packer/opt/"
-
-    local plugin_path = plugin_prefix .. plugin .. "/"
-    --	print('test '..plugin_path)
-    local ok, err, code = os.rename(plugin_path, plugin_path)
-    if not ok then
-        if code == 13 then
-            -- Permission denied, but it exists
-            return true
-        end
-    end
-    --	print(ok, err, code)
-    if ok then
-        vim.cmd("packadd " .. plugin)
-    end
-    return ok, err, code
-end
-
-vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
-
-require('plugins')
