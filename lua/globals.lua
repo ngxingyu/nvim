@@ -21,10 +21,10 @@ O = {
 
     -- database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
     python = {
-        linter = '',
+        linter = 'flake8',
         -- @usage can be 'yapf', 'black'
-        formatter = '',
-        autoformat = false,
+        formatter = 'black',
+        autoformat = true,
         isort = false,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true},
 		analysis = {type_checking = "basic", auto_search_paths = true, use_library_code_types = true}
@@ -32,13 +32,13 @@ O = {
     -- dart = {sdk_path = '/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot'},
     lua = {
         -- @usage can be 'lua-format'
-        formatter = '',
-        autoformat = false,
+        formatter = 'lua-fmt',
+        autoformat = true,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
     sh = {
         -- @usage can be 'shellcheck'
-        linter = '',
+        linter = 'shellcheck',
         -- @usage can be 'shfmt'
         formatter = '',
         autoformat = false,
@@ -52,24 +52,23 @@ O = {
         autoformat = false,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
-    -- json = {
-    --     -- @usage can be 'prettier'
-    --     formatter = '',
-    --     autoformat = false,
-    --     diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
-    -- },
-    -- tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'}},
+    json = {
+        -- @usage can be 'prettier'
+        formatter = 'prettier',
+        autoformat = false,
+        diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
+    },
+    tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'typescript', 'svelte'}},--'typescriptreact', 'javascriptreact', 
     -- clang = {diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}},
 	-- ruby = {
 	-- 	diagnostics = {virtualtext = {spacing = 0, prefix = ""}, signs = true, underline = true},
 	-- 	filetypes = {'rb', 'erb', 'rakefile'}
 	-- },
-    -- css = {formatter = '', autoformat = false, virtual_text = true},
-    -- json = {formatter = '', autoformat = false, virtual_text = true}
+    css = {formatter = '', autoformat = false, virtual_text = true},
+    json = {formatter = '', autoformat = false, virtual_text = true},
 
 	dashboard = {
-		custom_header = {"XYXYXY"
-		},
+		custom_header = {"XYXYXY"},
 		footer= {'ngxingyu'}
 	}
 }

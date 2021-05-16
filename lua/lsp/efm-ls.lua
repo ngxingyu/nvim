@@ -77,8 +77,8 @@ if O.tsserver.linter == 'eslint' then table.insert(tsserver_args, eslint) end
 
 local markdownlint = {
     -- TODO default to global lintrc
-    -- lintcommand = 'markdownlint -s -c ./markdownlintrc',
-    lintCommand = 'markdownlint -s',
+    lintcommand = 'markdownlint -s -c ~/.config/nvim/lua/lsp/cfg/.markdownlint.json',
+    -- lintCommand = 'markdownlint -s',
     lintStdin = true,
     lintFormats = {'%f:%l %m', '%f:%l:%c %m', '%f: %l: %m'}
 }
@@ -92,7 +92,7 @@ require "lspconfig".efm.setup {
         rootMarkers = {".git/"},
         languages = {
             python = python_arguments,
-            lua = lua_arguments,
+            -- lua = lua_arguments,
             sh = sh_arguments,
             javascript = tsserver_args,
             javascriptreact = tsserver_args,
