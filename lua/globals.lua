@@ -1,13 +1,13 @@
 O = {
-    -- auto_close_tree = 0,
+    auto_close_tree = 1,
     auto_complete = true,
-    -- colorscheme = 'spacegray',
-    -- hidden_files = true,
-    -- wrap_lines = false,
-    -- number = true,
-    -- relative_number = true,
+    colorscheme = 'medic_chalk',
+    hidden_files = true,
+    wrap_lines = false,
+    number = true,
+    relative_number = true,
     shell = 'bash',
-	-- timeoutlen = 100,
+	timeoutlen = 100,
     -- nvim_tree_disable_netrw = 0, -- "1 by default, disables netrw (must be set before plugin's packadd)
 
     -- @usage pass a table with your desired languages

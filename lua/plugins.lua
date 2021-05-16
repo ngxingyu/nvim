@@ -30,6 +30,34 @@ return require("packer").startup(
         use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
 
 
+        use 'kyazdani42/nvim-web-devicons' -- Just filetype icons
+        use {"glepnir/galaxyline.nvim"} -- bottom line
+        use {"kyazdani42/nvim-tree.lua"} -- file tree
+        use 'romgrk/barbar.nvim' -- Top bar
+
+
+        -- Telescope
+        use {"nvim-lua/popup.nvim"}
+        use {"nvim-lua/plenary.nvim"}
+        use {"nvim-telescope/telescope.nvim"}
+        use {"nvim-telescope/telescope-fzy-native.nvim"}
+
+        -- Git
+        use {"tpope/vim-fugitive"}
+
+
+        -- use {"terrortylor/nvim-comment"} -- Toggle comments
+        use'tpope/vim-commentary'
+        use {"folke/which-key.nvim"}
+
+        use {"vim-test/vim-test"} -- Test suite
+        use {"mfussenegger/nvim-dap"}
+
+        use {"mcmartelle/vim-monokai-bold"}
+        vim.cmd'colorscheme monokai-bold'
+        -- use {"ParamagicDev/vim-medic_chalk"} -- colorscheme
+        -- vim.cmd'colorscheme medic_chalk'
+
         -- use {'dense-analysis/ale'} -- Just use efm-ls
         
         require("config.nvim-lspinstall")
@@ -38,6 +66,11 @@ return require("packer").startup(
         require("config.treesitter")
         require("config.autopairs")
         require("config.vimtex")
+        require("config.which-key")
+        -- require('nvim_comment').setup()
+        require('config.nvim-tree')
+        require('config.galaxyline')
+        require('config.telescope')
         
     end
 )

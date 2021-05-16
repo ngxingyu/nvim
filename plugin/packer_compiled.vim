@@ -71,9 +71,17 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/barbar.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
@@ -91,6 +99,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -98,6 +110,10 @@ _G.packer_plugins = {
   ["nvim-lspinstall"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -107,9 +123,45 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/popup.nvim"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/telescope-fzy-native.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
+  ["vim-monokai-bold"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-monokai-bold"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-test"
   },
   ["vim-vsnip"] = {
     loaded = true,
@@ -118,6 +170,10 @@ _G.packer_plugins = {
   vimtex = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vimtex"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 

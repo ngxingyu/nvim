@@ -1,8 +1,11 @@
 local g = vim.g
 
 g.maplocalleader=' '
+
+
+vim.o.guifont = "JuliaMono Regular:h9"
 vim.wo.conceallevel=2
-vim.cmd("highlight Conceal ctermbg=black ctermfg=cyan guibg=Black guifg=cyan")
+vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")
 g.tex_flavor='latex'
 g.vimtex_view_method='zathura'
 g.vimtex_fold_enabled=1

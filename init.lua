@@ -4,6 +4,8 @@ require('plugins') -- entrypoint for plugins
 require('config') -- All plugin configurations
 require('mappings') -- shortcuts
 
+vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
+
 require('lsp') -- LSP configs
 require('lsp.lua-ls')
 require('lsp.efm-ls')

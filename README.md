@@ -66,3 +66,18 @@ Shellcheck: Install via apt or conda etc.
 ## Markdown Preview
 
 - Just run :MarkdownPreview (+ Stop / Toggle)
+
+## Which key
+
+- Simply define all important maps in the config file,
+- Any collisions can be detected by running `:checkhealth which-key`
+
+## Barbar
+
+## Custom mappings
+
+| Command   | Action           |
+| --------- | ---------------- |
+| <C-q>     | Close split      |
+| <Leader>w | Write            |
+| <F12>     | Toggle nvim tree |
