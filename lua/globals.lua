@@ -6,7 +6,7 @@ O = {
     -- wrap_lines = false,
     -- number = true,
     -- relative_number = true,
-    -- shell = 'bash',
+    shell = 'bash',
 	-- timeoutlen = 100,
     -- nvim_tree_disable_netrw = 0, -- "1 by default, disables netrw (must be set before plugin's packadd)
 
@@ -25,10 +25,9 @@ O = {
             "typescript",
             "vue",
             "yaml",
-            "latex",
             "cpp"
         },
-        -- ignore_install = {"haskell"},
+        ignore_install = {"latex"},
         highlight = {enabled = true},
         playground = {enabled = true},
         rainbow = {enabled = false}

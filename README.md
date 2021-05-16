@@ -9,6 +9,7 @@
   plugins, plugins settings, shortcuts, and LSP and all required languages.
 - :Packer\* commands for installation
 - :TS\* commands for treesitter
+- Somehow when I include ft="tex" for vimtex, some of the conceal features doesn't work, so I disabled that.
 
 ## Configure LSP / Linters
 
@@ -36,3 +37,32 @@ Shellcheck: Install via apt or conda etc.
 
 - To add custom snippets, just find the local snippet directory ( :echo g:vsnip_snippet_dir ) (usually ~/.vsnip) and add to the file. E.g. .tex snippets are located at plaintex.json and .latex snippets are located at tex.json etc.
 - Instead of doing the above, it's better to just call VsnipOpen and vim will open the file for you.
+
+## vimbqf
+
+## vimtex
+
+- Setup: Disable tex for treesitter (Highlighter), disable other tex plugins e.g. tex_conceal
+- VimtexTocToggle
+
+| Command | Action                                                     |
+| ------- | ---------------------------------------------------------- |
+| tsc     | toggle starred command (/enviromnent)                      |
+| tsd     | toggle surrounding delimiter () => \left(\right)           |
+| tse     | toggle starred enviromnent                                 |
+| tsf     | toggle (inline) fractions (i.e. 1/2 => \frac{1}{2} )       |
+| F7      | New command                                                |
+| cse     | change surrounding environment (e.g. itemize => enumerate) |
+| \]\]    | Close open delimiter (not needed with vimpairs             |
+| zo      | Open fold                                                  |
+| zc      | Close fold                                                 |
+| zM/m    | Close all folds / fold level +1                            |
+| zR/r    | Open all folds / fold level -1                             |
+| <ldr>ll | Autocompile                                                |
+| <ldr>lv | view                                                       |
+| <ldr>lk | Kill                                                       |
+| <ldr>lt | toggle                                                     |
+
+## Markdown Preview
+
+- Just run :MarkdownPreview (+ Stop / Toggle)
