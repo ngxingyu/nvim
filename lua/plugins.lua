@@ -16,15 +16,23 @@ return require("packer").startup(
         use "wbthomason/packer.nvim" -- Packer can manage itself as an optional plugin
         use "neovim/nvim-lspconfig" -- Builtin LSP package
         use {"kabouzeid/nvim-lspinstall"}
+        use "hrsh7th/nvim-compe"
+        use "windwp/nvim-autopairs" -- Auto insert matching pair for brackets
+        use "hrsh7th/vim-vsnip" -- Custom snippets
+        use "rafamadriz/friendly-snippets" -- Some generic snippets
+
+        use {"windwp/nvim-ts-autotag"} -- Auto insert matching html tags.
+        use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- incremental parser
+
+        -- use {'dense-analysis/ale'} -- Just use efm-ls
+        
         require("config.nvim-lspinstall")
         require("lsp")
+        require("config.nvim-compe")
+        require("config.treesitter")
+        require("config.autopairs")
 
-        -- use {
-        --     'w0rp/ale',
-        --     ft = {'sh', 'zsh', 'bash', 'c', 'cpp', 'cmake', 'html', 'markdown', 'racket', 'vim', 'tex'},
-        --     cmd = 'ALEEnable',
-        --     config = 'vim.cmd[[ALEEnable]]'
-        -- }
+        
 
     end
 )

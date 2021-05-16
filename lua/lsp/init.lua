@@ -1,4 +1,5 @@
-function on_attach(client)
+local lsp_config = {}
+function lsp_config.on_attach(client)
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
@@ -61,4 +62,4 @@ vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagn
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
 vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
 
-return lspconf
+return lsp_config

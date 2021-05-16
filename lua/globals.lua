@@ -1,6 +1,6 @@
 O = {
     -- auto_close_tree = 0,
-    -- auto_complete = true,
+    auto_complete = true,
     -- colorscheme = 'spacegray',
     -- hidden_files = true,
     -- wrap_lines = false,
@@ -11,13 +11,28 @@ O = {
     -- nvim_tree_disable_netrw = 0, -- "1 by default, disables netrw (must be set before plugin's packadd)
 
     -- @usage pass a table with your desired languages
-    -- treesitter = {
-    --     ensure_installed = "all",
-    --     ignore_install = {"haskell"},
-    --     highlight = {enabled = true},
-    --     playground = {enabled = true},
-    --     rainbow = {enabled = false}
-    -- },
+    treesitter = {
+        ensure_installed = {        
+            "javascript",
+            "html",
+            "css",
+            "bash",
+            "lua",
+            "json",
+            "python",
+            "svelte",
+            "dart",
+            "typescript",
+            "vue",
+            "yaml",
+            "latex",
+            "cpp"
+        },
+        -- ignore_install = {"haskell"},
+        highlight = {enabled = true},
+        playground = {enabled = true},
+        rainbow = {enabled = false}
+    },
 
     -- database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
     python = {

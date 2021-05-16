@@ -4,10 +4,10 @@ require('plugins') -- entrypoint for plugins
 require('config') -- All plugin configurations
 require('mappings') -- shortcuts
 
-
 require('lsp') -- LSP configs
 require('lsp.lua-ls')
 require('lsp.efm-ls')
+require('lsp.html-ls')
 -- require('lsp.efm-general-ls')
 -- require('lsp.angular-ls')
 -- require('lsp.bash-ls')
@@ -19,7 +19,6 @@ require('lsp.efm-ls')
 -- require('lsp.emmet-ls')
 -- require('lsp.graphql-ls')
 -- require('lsp.go-ls')
--- require('lsp.html-ls')
 -- require('lsp.json-ls')
 -- require('lsp.js-ts-ls')
 -- require('lsp.kotlin-ls')
