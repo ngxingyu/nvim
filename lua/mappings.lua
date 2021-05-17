@@ -55,7 +55,7 @@ vim.api.nvim_set_keymap('n', '<F12>', ':NvimTreeToggle<CR>', {noremap = true, si
 
 -- Close file
 vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', {noremap = true, silent=true})
-vim.api.nvim_set_keymap('n', '<Leader>q', ':q!<CR>', {noremap = true, silent=true})
+-- vim.api.nvim_set_keymap('n', '<Leader>q', ':q!<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 

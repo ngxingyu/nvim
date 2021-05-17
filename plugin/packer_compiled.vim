@@ -132,28 +132,28 @@ _G.packer_plugins = {
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/popup.nvim"
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/telescope-fzy-native.nvim"
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
   },
   ["telescope.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-monokai-bold"] = {
     loaded = true,

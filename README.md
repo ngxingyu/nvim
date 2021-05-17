@@ -81,3 +81,5 @@ Shellcheck: Install via apt or conda etc.
 | <C-q>     | Close split      |
 | <Leader>w | Write            |
 | <F12>     | Toggle nvim tree |
+K|LSP definition
+
