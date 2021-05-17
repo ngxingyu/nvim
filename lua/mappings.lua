@@ -2,10 +2,10 @@ vim.g.mapleader = ' '
 
 
 function _G.WinMove(key)
-    curwin = vim.api.nvim_get_current_win
-    cur = curwin()
+    Curwin = vim.api.nvim_get_current_win
+    Cur = Curwin()
     vim.api.nvim_command("wincmd "..key)
-    if curwin() == cur then
+    if Curwin() == Cur then
         if (string.match('jk',key)) then
             vim.api.nvim_command("wincmd s")
         else
@@ -55,6 +55,7 @@ vim.api.nvim_set_keymap('n', '<F12>', ':NvimTreeToggle<CR>', {noremap = true, si
 
 -- Close file
 vim.api.nvim_set_keymap('n', '<C-q>', ':q!<CR>', {noremap = true, silent=true})
+vim.api.nvim_set_keymap('n', '<Leader>q', ':q!<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', {noremap = true, silent=true})
 vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 

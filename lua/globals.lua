@@ -12,7 +12,7 @@ O = {
 
     -- @usage pass a table with your desired languages
     treesitter = {
-        ensure_installed = {        
+        ensure_installed = {
             "javascript",
             "html",
             "css",
@@ -72,14 +72,14 @@ O = {
         autoformat = false,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
-    tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'typescript', 'svelte'}},--'typescriptreact', 'javascriptreact', 
+    tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'typescript', 'svelte'}},--'typescriptreact', 'javascriptreact',
     -- clang = {diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}},
 	-- ruby = {
 	-- 	diagnostics = {virtualtext = {spacing = 0, prefix = ""}, signs = true, underline = true},
 	-- 	filetypes = {'rb', 'erb', 'rakefile'}
 	-- },
     css = {formatter = '', autoformat = false, virtual_text = true},
-    json = {formatter = '', autoformat = false, virtual_text = true},
+    -- json = {formatter = '', autoformat = false, virtual_text = true},
 
 	dashboard = {
 		custom_header = {"XYXYXY"},

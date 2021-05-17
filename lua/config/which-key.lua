@@ -70,6 +70,7 @@ vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap 
 
 local mappings = {
     ["w"] = "Write",
+    ["q"] = "Close split",
     ["c"] = "Close Buffer",
     ["f"] = "Find File",
     ["h"] = "No Highlight",
@@ -82,24 +83,22 @@ local mappings = {
         r = {"<cmd>DebugToggleRepl<cr>", "Toggle Repl"},
         s = {"<cmd>DebugStart<cr>", "Start"}
     },
-    G = {
+    g = {
         name = "+Git",
         R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
-        h={
-            j = {"<cmd>NextHunk<cr>", "Next Hunk"},
-            k = {"<cmd>PrevHunk<cr>", "Prev Hunk"},
-            p = {"<cmd>PreviewHunk<cr>", "Preview Hunk"},
-            r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
-            s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
-            u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
-        },
+        j = {"<cmd>NextHunk<cr>", "Next Hunk"},
+        k = {"<cmd>PrevHunk<cr>", "Prev Hunk"},
+        p = {"<cmd>PreviewHunk<cr>", "Preview Hunk"},
+        r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
+        s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
+        u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
         o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
-        s = {"<cmd>Telescope git_stash<cr>", "Open stash"},
+        S = {"<cmd>Telescope git_stash<cr>", "Open stash"},
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
     },
-    L = {
+    l = {
         name = "+LSP",
         a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
         A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},

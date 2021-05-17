@@ -1,5 +1,5 @@
 local lsp_config = {}
-function lsp_config.on_attach(client)
+function lsp_config.on_attach(client, bufnr)
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
@@ -41,20 +41,7 @@ end
 -- -- these langs require same lspconfig so put em all in a table and loop through!
 -- local servers = {"html", "cssls", "tsserver", "pyright", "bashls", "clangd", "ccls"}
 
--- for _, lang in ipairs(servers) do
---     lspconf[lang].setup {
---         on_attach = on_attach,
---         root_dir = vim.loop.cwd
---     }
--- end
-
--- -- vls conf example
--- local vls_binary = "/usr/local/bin/vls"
--- lspconf.vls.setup {
---     cmd = {vls_binary}
--- }
-
--- lua lsp settings
+-- for _, lang in ipairs(s
 
 -- replace the default lsp diagnostic letters with prettier symbols
 vim.fn.sign_define("LspDiagnosticsSignError", {text = "", numhl = "LspDiagnosticsDefaultError"})
