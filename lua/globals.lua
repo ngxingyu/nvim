@@ -21,13 +21,13 @@ O = {
             "json",
             "python",
             "svelte",
-            "dart",
+            -- "dart",
             "typescript",
             "vue",
             "yaml",
             "cpp"
         },
-        ignore_install = {"latex"},
+        ignore_install = {"latex", "dart"},
         highlight = {enabled = true},
         playground = {enabled = true},
         rainbow = {enabled = false}
@@ -63,7 +63,7 @@ O = {
         linter = 'eslint',
         -- @usage can be 'prettier'
         formatter = 'prettier',
-        autoformat = false,
+        autoformat = true,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
     json = {

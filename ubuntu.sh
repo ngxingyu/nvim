@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 fonts_dir="${HOME}/.local/share/fonts"
 if [ ! -d "${fonts_dir}" ]; then

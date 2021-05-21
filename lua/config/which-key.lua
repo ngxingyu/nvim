@@ -11,7 +11,7 @@ require("which-key").setup {
             windows = true, -- default bindings on <c-w>
             nav = true, -- misc bindings to work with windows
             z = true, -- bindings for folds, spelling and others prefixed with z
-            g = true -- bindings for prefixed with g
+            g = false -- bindings for prefixed with g
         }
     },
     icons = {
@@ -55,7 +55,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 -- vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- telescope
-vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap = true, silent = true})
 
 -- dashboard
 -- vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
@@ -72,7 +72,7 @@ local mappings = {
     ["w"] = "Write",
     ["q"] = "Close split",
     ["c"] = "Close Buffer",
-    ["f"] = "Find File",
+    ["f"] = {":Telescope find_files<CR>","Find File"},
     ["h"] = "No Highlight",
     d = {
         name = "+Debug",
@@ -131,19 +131,27 @@ local mappings = {
         j = {"<cmd>new +terminal<cr>", "Split terminal below"},
         t = {"<cmd>tabnew +terminal<cr>", "New tab terminal"}
     },
-    -- s = {
-    --     name = "+Search",
-    --     b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
-    --     c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
-    --     d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-    --     D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-    --     f = {"<cmd>Telescope find_files<cr>", "Find File"},
-    --     m = {"<cmd>Telescope marks<cr>", "Marks"},
-    --     M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
-    --     r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
-    --     R = {"<cmd>Telescope registers<cr>", "Registers"},
-    --     t = {"<cmd>Telescope live_grep<cr>", "Text"}
-    -- },
+    s = {
+        name = "+Search",
+        b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
+        c = {"<cmd>Telescope colorscheme<cr>", "Colorscheme"},
+        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+        f = {"<cmd>Telescope find_files<cr>", "Find File"},
+        m = {"<cmd>Telescope marks<cr>", "Marks"},
+        M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
+        r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
+        R = {"<cmd>Telescope registers<cr>", "Registers"},
+        t = {"<cmd>Telescope live_grep<cr>", "Text"}
+    },
+    F = {
+        name = "Flutter",
+        o = {"<cmd>FlutterOutline<cr>", "FlutterOutline"},
+        d = {"<cmd>FlutterDevices<cr>", "FlutterDevices"},
+        r = {"<cmd>FlutterReload<cr>", "FlutterReload"},
+        R = {"<cmd>FlutterRestart<cr>", "FlutterRestart"},
+        q = {"<cmd>FlutterQuit<cr>", "FlutterQuit"}
+    }
     -- S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
 }
 

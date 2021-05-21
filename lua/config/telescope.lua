@@ -24,7 +24,7 @@ require('telescope').setup {
         width = 0.8,
         preview_cutoff = 160,
         results_height = 1,
-        results_width = 0.5,
+        results_width = 0.8,
         border = {},
         borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
         color_devicons = true,

@@ -5,7 +5,10 @@ require'nvim-treesitter.configs'.setup {
         enable = O.treesitter.highlight.enabled, -- false will disable the whole extension
         use_languagetree = true
     },
-    autotag = {enable = true}
+    autotag = {enable = true},
+    context_commentstring = {
+        enable = true
+    }
     -- indent = {enable = true, disable = {"python", "html", "javascript"}},
     -- indent = {enable = {"javascriptreact"}},
 }

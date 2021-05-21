@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/friendly-snippets"
@@ -82,6 +86,10 @@ _G.packer_plugins = {
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
@@ -94,6 +102,10 @@ _G.packer_plugins = {
   ["nvim-bqf"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-bqf"
+  },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -123,6 +135,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -146,10 +162,6 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
