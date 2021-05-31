@@ -87,6 +87,8 @@ local markdownPandocFormat = {formatCommand = 'pandoc -f markdown -t gfm -sp --t
 
 require "lspconfig".efm.setup {
     cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
+    root_dir = require('lspconfig').util.root_pattern(".git"),
+    -- root_dir = require('lspconfig/util').root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
     init_options = {documentFormatting = true},
     settings = {
         rootMarkers = {".git/"},
@@ -95,15 +97,14 @@ require "lspconfig".efm.setup {
             -- lua = lua_arguments,
             sh = sh_arguments,
             javascript = tsserver_args,
-            javascriptreact = tsserver_args,
+            -- javascriptreact = tsserver_args,
 			typescript = tsserver_args,
-			typescriptreact = tsserver_args,
+			-- typescriptreact = tsserver_args,
             html = {prettier},
             css = {prettier},
             json = {prettier},
             yaml = {prettier},
             markdown = {markdownPandocFormat, markdownlint},
-            
         }
     }
 }

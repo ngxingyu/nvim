@@ -10,6 +10,7 @@ g.tex_flavor='latex'
 g.vimtex_view_method='zathura'
 g.vimtex_fold_enabled=1
 g.vimtex_quickfix_mode=0
+g.vimtex_compiler_latexmk_engines = {_='-lualatex'}
 
 local vimtex_syntax_custom_cmds={}
 table.insert(vimtex_syntax_custom_cmds,{name='vect', mathmode= 1, argstyle= 'bold', conceal= 1})

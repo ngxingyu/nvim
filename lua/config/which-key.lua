@@ -151,7 +151,7 @@ local mappings = {
         r = {"<cmd>FlutterReload<cr>", "FlutterReload"},
         R = {"<cmd>FlutterRestart<cr>", "FlutterRestart"},
         q = {"<cmd>FlutterQuit<cr>", "FlutterQuit"}
-    }
+    },
     -- S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
 }
 
