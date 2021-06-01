@@ -56,7 +56,7 @@ if O.sh.formatter == 'shfmt' then table.insert(sh_arguments, shfmt) end
 if O.sh.linter == 'shellcheck' then table.insert(sh_arguments, shellcheck) end
 
 -- tsserver/web javascript react, vue, json, html, css, yaml
-local prettier = {formatCommand = "prettier --stdin-filepath ${INPUT}", formatStdin = true}
+local prettier = {formatCommand = "./node_modules/.bin/prettier --stdin-filepath ${INPUT}", formatStdin = true}
 -- You can look for project scope Prettier and Eslint with e.g. vim.fn.glob("node_modules/.bin/prettier") etc. If it is not found revert to global Prettier where needed.
 -- local prettier = {formatCommand = "./node_modules/.bin/prettier --stdin-filepath ${INPUT}", formatStdin = true}
 
@@ -89,7 +89,8 @@ require "lspconfig".efm.setup {
     cmd = {DATA_PATH .. "/lspinstall/efm/efm-langserver"},
     root_dir = require('lspconfig').util.root_pattern(".git"),
     -- root_dir = require('lspconfig/util').root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-    init_options = {documentFormatting = true},
+    init_options = {documentFormatting = true, codeAction=false},
+    filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript","typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
     settings = {
         rootMarkers = {".git/"},
         languages = {

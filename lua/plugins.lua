@@ -16,6 +16,9 @@ function(use)
     use "neovim/nvim-lspconfig" -- Builtin LSP package
     use {"kabouzeid/nvim-lspinstall"}
     use {'glepnir/lspsaga.nvim'}
+    -- use {'prettier/vim-prettier'}
+    -- use "neomake/neomake"
+
 
     use "hrsh7th/nvim-compe"
     use "windwp/nvim-autopairs" -- Auto insert matching pair for brackets
