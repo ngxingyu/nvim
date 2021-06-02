@@ -17,7 +17,7 @@ vim.o.mouse = "a" -- Enable your mouse
 vim.o.splitbelow = true -- Horizontal splits will automatically be below
 vim.o.termguicolors = true -- set term gui colors most terminals support this
 vim.o.splitright = true -- Vertical splits will automatically be to the right
-vim.o.t_Co = "256" -- Support 256 colors
+-- vim.wo.t_Co = "256" -- Support 256 colors
 vim.o.conceallevel = 1 -- So that I can see `` in markdown files
 -- vim.cmd('hi Conceal ctermbg=black ctermfg=cyan guibg=black guifg=cyan')
 vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")

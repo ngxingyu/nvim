@@ -119,6 +119,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap-python"
+  },
+  ["nvim-dap-virtual-text"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"

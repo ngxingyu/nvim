@@ -59,6 +59,9 @@ function(use)
 
     use {"vim-test/vim-test"} -- Test suite
     use {"mfussenegger/nvim-dap"}
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'mfussenegger/nvim-dap-python'
+    -- use "sakhnik/nvim-gdb"
 
     use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
@@ -81,6 +84,7 @@ function(use)
     require('config.galaxyline')
     require('config.gitsigns')
     require("config.flutter-tools")
+    require("config.nvim-dap")
     require("lsp")
 
 end

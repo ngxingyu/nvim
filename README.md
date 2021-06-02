@@ -1,5 +1,16 @@
 # Setup guide
 
+```shell
+cd $HOME
+git clone https://github.com/neovim/neovim.git
+cd neovim
+make cmake
+rm -r build/  # clear the CMake cache
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
+make install
+export PATH="$HOME/neovim/bin:$PATH"
+```
+
 `git clone https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
 
 ## Initialization

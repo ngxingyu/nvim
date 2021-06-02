@@ -23,12 +23,16 @@ require("flutter-tools").setup {
   -- outline = {
   --   open_cmd = "30vnew", -- command to use to open the outline buffer
   -- },
-  -- lsp = {
-  --   on_attach = my_custom_on_attach,
-  --   capabilities = my_custom_capabilities -- e.g. lsp_status capabilities
-  --   settings = {
-  --     showTodos = true,
-  --     completeFunctionCalls = true -- NOTE: this is WIP and doesn't work currently
-  --   }
-  -- }
+  lsp = {
+    cmd = { "dart", O.dart.sdk_path, "--lsp" },
+    filetypes = { "dart" },
+    on_attach = require'lsp'.on_attach,
+    init_options = {
+      closingLabels = true,
+      flutterOutline = true,
+      onlyAnalyzeProjectsWithOpenFiles = false,
+      outline = false,
+      suggestFromUnimportedLibraries = true
+    }
+  }
 }
