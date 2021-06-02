@@ -1,6 +1,7 @@
 
 require('lspconfig').vuels.setup {
-    cmd = { "vls" },
+    -- cmd = { "vls" },
+    cmd = {DATA_PATH .. "/lspinstall/vue/node_modules/.bin/vls", "--stdio"},
     filetypes = { "vue" },
     on_attach = require'lsp'.on_attach,
     -- root_dir = require('lspconfig').util.root_pattern(".git", ".")

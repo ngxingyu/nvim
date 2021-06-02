@@ -70,7 +70,7 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 
 local mappings = {
     ["w"] = "Write",
-    ["q"] = {"<cmd>q!<cr>","Close split"},
+    -- ["q"] = {"<cmd>q!<cr>","Close split"},
     ["c"] = "Close Buffer",
     ["f"] = {":Telescope find_files<CR>","Find File"},
     ["h"] = "No Highlight",
