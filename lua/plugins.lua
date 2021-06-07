@@ -26,10 +26,10 @@ function(use)
     use "rafamadriz/friendly-snippets" -- Some generic snippets
 
     use {"kevinhwang91/nvim-bqf"} -- Quickfix window???
-    use {"windwp/nvim-ts-autotag"} -- Auto insert matching html tags.
+    -- use {"windwp/nvim-ts-autotag"} -- Auto insert matching html tags.
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- incremental parser
 
-    use {"lervag/vimtex"}
+    -- use {"lervag/vimtex"}
     -- use {'KeitaNakamura/tex-conceal.vim', ft={'tex'}} -- No Need
     use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
 
@@ -52,7 +52,7 @@ function(use)
     use {"lewis6991/gitsigns.nvim"}
 
 
-    use {'JoosepAlviste/nvim-ts-context-commentstring'}
+    -- use {'JoosepAlviste/nvim-ts-context-commentstring'}
     use {"terrortylor/nvim-comment"} -- Toggle comments
     -- use'tpope/vim-commentary'
     use {"folke/which-key.nvim"}
@@ -63,7 +63,7 @@ function(use)
     use 'mfussenegger/nvim-dap-python'
     -- use "sakhnik/nvim-gdb"
 
-    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+    -- use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
     use {"mcmartelle/vim-monokai-bold"}
     vim.cmd'colorscheme monokai-bold'
@@ -77,13 +77,13 @@ function(use)
     require("config.nvim-compe")
     require("config.treesitter")
     require("config.autopairs")
-    require("config.vimtex")
+    -- require("config.vimtex")
     require("config.which-key")
     require('config.nvim-comment')
     require('config.nvim-tree')
     require('config.galaxyline')
     require('config.gitsigns')
-    require("config.flutter-tools")
+    -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("lsp")
 

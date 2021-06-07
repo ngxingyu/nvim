@@ -13,19 +13,19 @@ O = {
     -- @usage pass a table with your desired languages
     treesitter = {
         ensure_installed = {
-            "javascript",
-            "html",
-            "css",
+            -- "javascript",
+            -- "html",
+            -- "css",
             "bash",
-            "lua",
-            "json",
+            -- "lua",
+            -- "json",
             "python",
-            "svelte",
-            "dart",
-            "typescript",
-            "vue",
+            -- "svelte",
+            -- "dart",
+            -- "typescript",
+            -- "vue",
             "yaml",
-            "cpp"
+            -- "cpp"
         },
         ignore_install = {"latex"},
         highlight = {enabled = true},
@@ -43,7 +43,7 @@ O = {
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true},
 		analysis = {type_checking = "basic", auto_search_paths = true, use_library_code_types = true}
     },
-    dart = {sdk_path = '/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot'},
+    -- dart = {sdk_path = '/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot'},
     lua = {
         -- @usage can be 'lua-format'
         formatter = 'lua-fmt',
@@ -58,27 +58,27 @@ O = {
         autoformat = false,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
-    tsserver = {
-        -- @usage can be 'eslint'
-        linter = 'eslint',
-        -- @usage can be 'prettier'
-        formatter = 'prettier',
-        autoformat = true,
-        diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
-    },
+    -- tsserver = {
+    --     -- @usage can be 'eslint'
+    --     linter = 'eslint',
+    --     -- @usage can be 'prettier'
+    --     formatter = 'prettier',
+    --     autoformat = true,
+    --     diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
+    -- },
     json = {
         -- @usage can be 'prettier'
         formatter = 'prettier',
         autoformat = false,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
-    tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'typescript', 'svelte'}},--'typescriptreact', 'javascriptreact',
+    -- tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'typescript', 'svelte'}},--'typescriptreact', 'javascriptreact',
     -- clang = {diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}},
 	-- ruby = {
 	-- 	diagnostics = {virtualtext = {spacing = 0, prefix = ""}, signs = true, underline = true},
 	-- 	filetypes = {'rb', 'erb', 'rakefile'}
 	-- },
-    css = {formatter = '', autoformat = false, virtual_text = true},
+    -- css = {formatter = '', autoformat = false, virtual_text = true},
     -- json = {formatter = '', autoformat = false, virtual_text = true},
 
 	dashboard = {
