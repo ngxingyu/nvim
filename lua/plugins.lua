@@ -59,6 +59,7 @@ return require("packer").startup(
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
     use "bfredl/nvim-ipy"
+    use "cjrh/vim-conda"
     -- use "sakhnik/nvim-gdb"
 
     -- use {"akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim"}

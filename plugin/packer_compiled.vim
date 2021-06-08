@@ -79,10 +79,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
-  ["flutter-tools.nvim"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/friendly-snippets"
@@ -98,10 +94,6 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -151,14 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
-  ["nvim-ts-autotag"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
-  },
-  ["nvim-ts-context-commentstring"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
@@ -206,10 +190,6 @@ _G.packer_plugins = {
   ["vim-vsnip"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-vsnip"
-  },
-  vimtex = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vimtex"
   },
   ["which-key.nvim"] = {
     loaded = true,
