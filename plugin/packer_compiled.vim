@@ -131,6 +131,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text"
   },
+  ["nvim-ipy"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ipy"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -186,6 +190,10 @@ _G.packer_plugins = {
   ["vim-monokai-bold"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-monokai-bold"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-table-mode"] = {
     loaded = true,
