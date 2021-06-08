@@ -123,10 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text"
   },
-  ["nvim-ipy"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-ipy"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -167,6 +163,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["vim-conda"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-conda"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-fugitive"
@@ -174,6 +174,10 @@ _G.packer_plugins = {
   ["vim-monokai-bold"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-monokai-bold"
+  },
+  ["vim-slime"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-slime"
   },
   ["vim-surround"] = {
     loaded = true,

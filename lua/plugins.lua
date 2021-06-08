@@ -58,7 +58,8 @@ return require("packer").startup(
     use {"mfussenegger/nvim-dap"}
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
-    use "bfredl/nvim-ipy"
+    -- use "bfredl/nvim-ipy"
+    use "jpalardy/vim-slime"
     use "cjrh/vim-conda"
     -- use "sakhnik/nvim-gdb"
 
@@ -90,7 +91,7 @@ return require("packer").startup(
     -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("config.dashboard")
-    require("config.nvim-ipy")
+    require("config.vim-slime")
     require("lsp")
   end
 )
