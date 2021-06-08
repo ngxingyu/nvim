@@ -8,6 +8,7 @@ require'lspconfig'.sumneko_lua.setup {
     root_dir = function()
         return vim.loop.cwd()
     end,
+    on_attach = require'lsp'.on_attach,
     settings = {
         Lua = {
             runtime = {

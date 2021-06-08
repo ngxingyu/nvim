@@ -10,7 +10,7 @@ require('lsp') -- LSP configs
 require('lsp.lua-ls')
 require('lsp.efm-ls')
 require('lsp.html-ls')
-require('lsp.latex-ls')
+-- require('lsp.latex-ls')
 -- require('lsp.efm-general-ls')
 -- require('lsp.angular-ls')
 require('lsp.bash-ls')

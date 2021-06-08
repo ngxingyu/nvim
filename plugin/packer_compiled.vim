@@ -75,6 +75,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
@@ -182,6 +186,10 @@ _G.packer_plugins = {
   ["vim-monokai-bold"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-monokai-bold"
+  },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-table-mode"
   },
   ["vim-test"] = {
     loaded = true,

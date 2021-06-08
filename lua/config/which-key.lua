@@ -98,25 +98,6 @@ local mappings = {
         c = {"<cmd>Telescope git_commits<cr>", "Checkout commit"},
         C = {"<cmd>Telescope git_bcommits<cr>", "Checkout commit(for current file)"},
     },
-    l = {
-        name = "+LSP",
-        a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
-        A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>LspFormatting<cr>", "Format"},
-        i = {"<cmd>LspInfo<cr>", "Info"},
-        -- l = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
-        l = {'Vimtex compile'},
-        L = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
-        p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
-        r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-        t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
-        x = {"<cmd>cclose<cr>", "Close Quickfix"},
-        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
-        S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
-    },
     t = {
         name = "Test",
         n = {"<cmd>TestNearest<cr>", "Run nearest test"},
@@ -142,7 +123,9 @@ local mappings = {
         M = {"<cmd>Telescope man_pages<cr>", "Man Pages"},
         r = {"<cmd>Telescope oldfiles<cr>", "Open Recent File"},
         R = {"<cmd>Telescope registers<cr>", "Registers"},
-        t = {"<cmd>Telescope live_grep<cr>", "Text"}
+        t = {"<cmd>Telescope live_grep<cr>", "Text"},
+        s = {"<cmd>SessionSave<cr>", "Save session"},
+        l = {"<cmd>SessionLoad<cr>", "Load session"}
     },
     F = {
         name = "Flutter",
@@ -157,3 +140,23 @@ local mappings = {
 
 local wk = require("which-key")
 wk.register(mappings, opts)
+
+_G.whichkeyTex = function()
+  local buf = vim.api.nvim_get_current_buf()
+  wk.register({
+    l = {
+            name = "+LSP",
+            a = {"Vimtex context menu", buffer = buf},
+            i = {"Vimtex Info", buffer = buf},
+            l = {"Vimtex Compile", buffer = buf},
+            q = {"Vimtex Log", buffer = buf},
+            t = {"Vimtex toggle TOC", buffer = buf},
+            x = {"Vimtex reload", buffer = buf},
+            s = {"Vimtex toggle main", buffer = buf},
+        },
+      }, opts)
+end
+
+vim.cmd(([[
+autocmd FileType tex lua whichkeyTex()
+]]))
