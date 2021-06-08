@@ -48,12 +48,7 @@ return require("packer").startup(
     use {"tpope/vim-fugitive"}
     use {"lewis6991/gitsigns.nvim"}
 
-<<<<<<< HEAD
     -- use {"JoosepAlviste/nvim-ts-context-commentstring"}
-=======
-
-    -- use {'JoosepAlviste/nvim-ts-context-commentstring'}
->>>>>>> 803bfab3c2a7d227c7f8b7b5ec47938f417012d9
     use {"terrortylor/nvim-comment"} -- Toggle comments
     -- use'tpope/vim-commentary'
     use {"folke/which-key.nvim"}
@@ -63,19 +58,14 @@ return require("packer").startup(
     use {"mfussenegger/nvim-dap"}
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
-    use "bfredl/nvim-ipy"
     -- use "sakhnik/nvim-gdb"
 
-<<<<<<< HEAD
     -- use {"akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim"}
 
     use {"glepnir/dashboard-nvim"}
     -- use "mhinz/vim-startify"
 
     use "dhruvasagar/vim-table-mode"
-=======
-    -- use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
->>>>>>> 803bfab3c2a7d227c7f8b7b5ec47938f417012d9
 
     use {"mcmartelle/vim-monokai-bold"}
     vim.cmd "colorscheme monokai-bold"
@@ -91,21 +81,13 @@ return require("packer").startup(
     require("config.autopairs")
     -- require("config.vimtex")
     require("config.which-key")
-<<<<<<< HEAD
     require("config.nvim-comment")
     require("config.nvim-tree")
     require("config.galaxyline")
     require("config.gitsigns")
-=======
-    require('config.nvim-comment')
-    require('config.nvim-tree')
-    require('config.galaxyline')
-    require('config.gitsigns')
->>>>>>> 803bfab3c2a7d227c7f8b7b5ec47938f417012d9
     -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("config.dashboard")
-    require("config.nvim-ipy")
     require("lsp")
   end
 )
