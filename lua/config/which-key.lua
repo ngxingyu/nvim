@@ -87,6 +87,7 @@ local mappings = {
         name = "+Git",
         R = {"<cmd>ResetBuffer<cr>", "Reset Buffer"},
         j = {"<cmd>NextHunk<cr>", "Next Hunk"},
+        l = {"<cmd>Gvdiffsplit<cr>", "Vdiffsplit"},
         k = {"<cmd>PrevHunk<cr>", "Prev Hunk"},
         p = {"<cmd>PreviewHunk<cr>", "Preview Hunk"},
         r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
