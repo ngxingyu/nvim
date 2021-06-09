@@ -43,3 +43,4 @@ vim.o.guifont = "UbuntuMono Nerd Font Regular:h17"
 -- vim.o.guifont = "Hack\\ Nerd\\ Font\\ Mono"
 -- vim.o.guifont = "SauceCodePro Nerd Font:h17"
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
+vim.g.conda_startup_msg_suppress = 1

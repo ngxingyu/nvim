@@ -60,7 +60,7 @@ return require("packer").startup(
     use "mfussenegger/nvim-dap-python"
     -- use "bfredl/nvim-ipy"
     use "jpalardy/vim-slime"
-    use "cjrh/vim-conda"
+    use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
     -- use "sakhnik/nvim-gdb"
 
     -- use {"akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim"}

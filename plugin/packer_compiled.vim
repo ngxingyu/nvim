@@ -62,8 +62,9 @@ time("try_loadstring definition", true)
 local function try_loadstring(s, component, name)
   local success, result = pcall(loadstring(s))
   if not success then
-    print('Error running ' .. component .. ' for ' .. name)
-    error(result)
+    vim.schedule(function()
+      vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
+    end)
   end
   return result
 end
@@ -164,8 +165,9 @@ _G.packer_plugins = {
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-conda"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-conda"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/opt/vim-conda"
   },
   ["vim-fugitive"] = {
     loaded = true,
@@ -202,6 +204,13 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time("Defining lazy-load filetype autocommands", true)
+vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-conda'}, { ft = "python" }, _G.packer_plugins)]]
+time("Defining lazy-load filetype autocommands", false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 END
