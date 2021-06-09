@@ -93,6 +93,7 @@ local mappings = {
         r = {"<cmd>ResetHunk<cr>", "Reset Hunk"},
         s = {"<cmd>StageHunk<cr>", "Stage Hunk"},
         u = {"<cmd>UndoStageHunk<cr>", "Undo Stage Hunk"},
+        g = {"<cmd>Git<cr>", "Git"},
         o = {"<cmd>Telescope git_status<cr>", "Open changed file"},
         S = {"<cmd>Telescope git_stash<cr>", "Open stash"},
         b = {"<cmd>Telescope git_branches<cr>", "Checkout branch"},
