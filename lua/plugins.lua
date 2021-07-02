@@ -42,7 +42,10 @@ return require("packer").startup(
       "nvim-telescope/telescope.nvim",
       requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
-    use {"nvim-telescope/telescope-fzy-native.nvim"}
+    -- Use fzy for telescope
+    use {
+      "nvim-telescope/telescope-fzy-native.nvim"
+  }
 
     -- Git
     use {"tpope/vim-fugitive"}
