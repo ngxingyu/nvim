@@ -1,5 +1,5 @@
 
-require('lspconfig').vuels.setup {
+pcall(function() return require('lspconfig').vuels.setup {
     -- cmd = { "vls" },
     cmd = {DATA_PATH .. "/lspinstall/vue/node_modules/.bin/vls", "--stdio"},
     filetypes = { "vue" },
@@ -26,4 +26,4 @@ require('lspconfig').vuels.setup {
             }
         }
     }
-}
+} end)
