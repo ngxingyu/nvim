@@ -19,7 +19,7 @@ O = {
             "bash",
             -- "lua",
             -- "json",
-            "python",
+            -- "python",
             -- "svelte",
             -- "dart",
             -- "typescript",

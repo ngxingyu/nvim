@@ -62,8 +62,8 @@ return require("packer").startup(
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
     -- use "bfredl/nvim-ipy"
-    use "jpalardy/vim-slime"
-    use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
+    -- use "jpalardy/vim-slime"
+    -- use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
     -- use "sakhnik/nvim-gdb"
 
     -- use {"akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim"}
@@ -85,7 +85,7 @@ return require("packer").startup(
     require("config.nvim-compe")
     require("config.treesitter")
     require("config.autopairs")
-    -- require("config.vimtex")
+    require("config.vimtex")
     require("config.which-key")
     require("config.nvim-comment")
     require("config.nvim-tree")
@@ -94,7 +94,7 @@ return require("packer").startup(
     -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("config.dashboard")
-    require("config.vim-slime")
+    -- require("config.vim-slime")
     require("lsp")
   end
 )
