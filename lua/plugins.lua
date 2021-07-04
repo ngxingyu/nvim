@@ -75,7 +75,7 @@ return require("packer").startup(
 
     use {"mcmartelle/vim-monokai-bold"}
 
-    pcall(function() return vim.cmd("colorscheme monokai-bold") end)
+    -- pcall(function() return vim.cmd("colorscheme monokai-bold") end)
     -- use {"ParamagicDev/vim-medic_chalk"} -- colorscheme
     -- vim.cmd'colorscheme medic_chalk'
 
