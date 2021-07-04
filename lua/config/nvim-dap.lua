@@ -1,4 +1,4 @@
-require('dap-python').setup('~/miniconda3/bin/python')
+pcall(function() return require('dap-python').setup('~/miniconda3/bin/python') end)
 
 -- virtual text deactivated (default)
 -- vim.g.dap_virtual_text = false

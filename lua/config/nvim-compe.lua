@@ -1,6 +1,6 @@
 vim.o.completeopt = "menuone,noselect"
 
-require'compe'.setup {
+pcall(function() return require'compe'.setup {
     enabled = O.auto_complete,
     autocomplete = true,
     debug = false,
@@ -27,7 +27,7 @@ require'compe'.setup {
         -- treesitter = {kind = "  "},
         emoji = {kind = " ﲃ  (Emoji)", filetypes={"markdown", "text"}}
     }
-}
+} end)
 
 local t = function(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
