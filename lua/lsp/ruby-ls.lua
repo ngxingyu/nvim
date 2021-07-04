@@ -1,5 +1,5 @@
 -- If you are using rvm, make sure to change below configuration
-require'lspconfig'.solargraph.setup {
+pcall(function() return require'lspconfig'.solargraph.setup {
     cmd = { DATA_PATH .. "~/.rbenv/shims/solargraph", "--stdio" },
     on_attach = require'lsp'.on_attach,
     handlers = {
@@ -12,4 +12,4 @@ require'lspconfig'.solargraph.setup {
         })
     },
     filetypes = O.ruby.filetypes,
-}
+} end)

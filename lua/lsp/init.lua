@@ -1,5 +1,5 @@
 local lsp_config = {}
-local wk = require("which-key")
+local status, wk = pcall(function() return require("which-key") end)
 function lsp_config.on_attach(client, bufnr)
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -51,29 +51,30 @@ function lsp_config.on_attach(client, bufnr)
   buf_set_keymap("n", "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", opts)
   buf_set_keymap("n", "<leader>lS", "<cmd>Telescope lsp_workspace_symbols<cr>", opts)
 
-  wk.register(
-    {
-      ["<leader>l"] = {
-        name = "+LSP",
-        a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
-        A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
-        d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
-        D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
-        f = {"<cmd>LspFormatting<cr>", "Format"},
-        i = {"<cmd>LspInfo<cr>", "Info"},
-        F = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
-        l = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
-        p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
-        q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
-        r = {"<cmd>Lspsaga rename<cr>", "Rename"},
-        t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
-        x = {"<cmd>cclose<cr>", "Close Quickfix"},
-        s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
-        S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
-      }
-    },
-    opts
-  )
+  if status then wk.register(
+      {
+        ["<leader>l"] = {
+          name = "+LSP",
+          a = {"<cmd>Lspsaga code_action<cr>", "Code Action"},
+          A = {"<cmd>Lspsaga range_code_action<cr>", "Selected Action"},
+          d = {"<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics"},
+          D = {"<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics"},
+          f = {"<cmd>LspFormatting<cr>", "Format"},
+          i = {"<cmd>LspInfo<cr>", "Info"},
+          F = {"<cmd>Lspsaga lsp_finder<cr>", "LSP Finder"},
+          l = {"<cmd>Lspsaga show_line_diagnostics<cr>", "Line Diagnostics"},
+          p = {"<cmd>Lspsaga preview_definition<cr>", "Preview Definition"},
+          q = {"<cmd>Telescope quickfix<cr>", "Quickfix"},
+          r = {"<cmd>Lspsaga rename<cr>", "Rename"},
+          t = {"<cmd>LspTypeDefinition<cr>", "Type Definition"},
+          x = {"<cmd>cclose<cr>", "Close Quickfix"},
+          s = {"<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols"},
+          S = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols"}
+        }
+      },
+      opts
+    )
+  end
 end
 
 -- local lspconf = require("lspconfig")

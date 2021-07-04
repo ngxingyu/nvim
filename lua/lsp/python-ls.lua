@@ -1,5 +1,5 @@
 -- npm i -g pyright
-require'lspconfig'.pyright.setup {
+pcall(function() return require'lspconfig'.pyright.setup {
     cmd = {DATA_PATH .. "/lspinstall/python/node_modules/.bin/pyright-langserver", "--stdio"},
     on_attach = require'lsp'.on_attach,
     handlers = {
@@ -19,4 +19,4 @@ require'lspconfig'.pyright.setup {
         }
       }
     }
-}
+} end)

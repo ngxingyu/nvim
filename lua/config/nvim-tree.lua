@@ -16,14 +16,14 @@ g.nvim_tree_tab_open = 0
 g.nvim_tree_allow_resize = 1
 g.nvim_tree_lsp_diagnostics = 1
 
-local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-    vim.g.nvim_tree_bindings = {
+local status, tree_cb = pcall(function() return require'nvim-tree.config'.nvim_tree_callback end)
+if status then vim.g.nvim_tree_bindings = {
       -- ["<CR>"] = ":YourVimFunction()<cr>",
       -- ["u"] = ":lua require'some_module'.some_function()<cr>",
         {key = {"l", "<CR>", "o"}, cb = tree_cb("edit")},
         {key = "h", cb = tree_cb("close_node")},
         {key = "v", cb = tree_cb("vsplit")}
-    }
+    } end
 vim.g.nvim_tree_show_icons = {git = 1, folders = 1, files = 1}
 vim.g.nvim_tree_icons = {
     default = '',

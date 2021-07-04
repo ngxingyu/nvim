@@ -44,3 +44,4 @@ vim.o.guifont = "UbuntuMono Nerd Font Regular:h17"
 -- vim.o.guifont = "SauceCodePro Nerd Font:h17"
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
 vim.g.conda_startup_msg_suppress = 1
+pcall(function() return vim.cmd("colorscheme monokai-bold") end)

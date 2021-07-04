@@ -1,4 +1,4 @@
-require'lspconfig'.dartls.setup{
+pcall(function() return require'lspconfig'.dartls.setup{
     cmd = { "dart", O.dart.sdk_path, "--lsp" },
     filetypes = { "dart" },
     on_attach = require'lsp'.on_attach,
@@ -9,4 +9,4 @@ require'lspconfig'.dartls.setup{
       outline = false,
       suggestFromUnimportedLibraries = true
     }
-}
+} end)

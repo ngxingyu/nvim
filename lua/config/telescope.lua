@@ -1,9 +1,9 @@
-local actions = require('telescope.actions')
+local status, actions = pcall(function() return require 'telescope.actions' end)
 -- Global remapping
 -----------------------------i
 
 -- '--color=never',
-require('telescope').setup {
+pcall(function() return require('telescope').setup {
     defaults = {
         find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
         -- prompt_prefix = " ",
@@ -74,7 +74,7 @@ require('telescope').setup {
             override_file_sorter = true,
         }
     }
-}
+} end)
 
 -- require'telescope.builtin'.git_branches({
 --     attach_mappings = function(_, map)

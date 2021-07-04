@@ -1,8 +1,7 @@
 
 local remap = vim.api.nvim_set_keymap
-local npairs = require('nvim-autopairs')
-local Rule = require('nvim-autopairs.rule')
-
+local npstatus, npairs = pcall(function() return require('nvim-autopairs')end)
+local status, Rule = pcall(function() return require('nvim-autopairs.rule')end)
 -- skip it, if you use another global object
 _G.MUtils= {}
 
@@ -22,14 +21,14 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-npairs.setup({
-    check_ts = true,
-    ts_config = {
-        lua = {'string'},-- it will not add pair on that treesitter node
-        javascript = {'template_string'},
-        java = false,-- don't check treesitter on java
-    }
-})
+if npstatus then npairs.setup({
+  check_ts = true,
+  ts_config = {
+      lua = {'string'},-- it will not add pair on that treesitter node
+      javascript = {'template_string'},
+      java = false,-- don't check treesitter on java
+  }
+}) end
 
 -- require('nvim-treesitter.configs').setup {
 --     autopairs = {enable = true}

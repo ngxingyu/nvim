@@ -1,4 +1,4 @@
-require'lspconfig'.elmls.setup {
+pcall(function() return require'lspconfig'.elmls.setup {
     cmd = {DATA_PATH .. "/lspinstall/elm/node_modules/.bin/elm-language-server"},
 	init_options= {
 		elmAnalyseTrigger = "change",
@@ -6,4 +6,4 @@ require'lspconfig'.elmls.setup {
     	elmPath = DATA_PATH .. "/lspinstall/elm/node_modules/.bin/elm",
     	elmTestPath = DATA_PATH .. "/lspinstall/elm/node_modules/.bin/elm-test"
 	}
-}
+} end)

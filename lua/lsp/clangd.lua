@@ -1,4 +1,4 @@
-require'lspconfig'.clangd.setup {
+pcall(function() return require'lspconfig'.clangd.setup {
     cmd = {DATA_PATH .. "/lspinstall/cpp/clangd/bin/clangd"},
     on_attach = require'lsp'.on_attach,
     handlers = {
@@ -10,4 +10,4 @@ require'lspconfig'.clangd.setup {
 
         })
     }
-}
+} end)

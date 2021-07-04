@@ -1,6 +1,6 @@
-require('telescope').load_extension("flutter")
+pcall(function() return require('telescope').load_extension("flutter") end)
 
-require("flutter-tools").setup {
+pcall(function() return require("flutter-tools").setup {
   experimental = { -- map of feature flags
     lsp_derive_paths = false, -- experimental: Attempt to find the user's flutter SDK
   },
@@ -35,4 +35,4 @@ require("flutter-tools").setup {
       suggestFromUnimportedLibraries = true
     }
   }
-}
+} end)
