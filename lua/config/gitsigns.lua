@@ -1,4 +1,4 @@
-require('gitsigns').setup {
+pcall(function() return require('gitsigns').setup {
   signs = {
     -- TODO add hl to colorscheme
     add          = {hl = 'GitSignsAdd'   , text = '▎', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
@@ -22,4 +22,4 @@ require('gitsigns').setup {
   update_debounce = 200,
   status_formatter = nil, -- Use default
   use_decoration_api = false
-}
+} end)

@@ -1,4 +1,6 @@
-require("which-key").setup {
+local wkstatus, wk = pcall(function() return require("which-key") end)
+
+if wkstatus then wk.setup {
     plugins = {
         marks = true, -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
@@ -33,7 +35,7 @@ require("which-key").setup {
     hidden = {"<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ "}, -- hide mapping boilerplate
     show_help = true, -- show help message on the command line when the popup is visible
     -- triggers = {"<leader>"}
-}
+} end
 
 local opts = {
     mode = "n", -- NORMAL mode
@@ -140,8 +142,7 @@ local mappings = {
     -- S = {name = "+Session", s = {"<cmd>SessionSave<cr>", "Save Session"}, l = {"<cmd>SessionLoad<cr>", "Load Session"}}
 }
 
-local wk = require("which-key")
-wk.register(mappings, opts)
+if wkstatus then wk.register(mappings, opts) end
 
 _G.whichkeyTex = function()
   local buf = vim.api.nvim_get_current_buf()
