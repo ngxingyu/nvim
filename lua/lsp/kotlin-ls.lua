@@ -6,7 +6,7 @@
 --- 	https://github.com/udalov/kotlin-vim (recommended)
 --- 	Note that there is no LICENSE specified yet.
 
-local util = require 'lspconfig/util'
+local util = pcall(function() return require 'lspconfig/util' end)
 
 local bin_name = DATA_PATH .. "/lspinstall/kotlin/language-server/server/build/install/server/bin/kotlin-language-server"
 if vim.fn.has('win32') == 1 then
