@@ -3,7 +3,7 @@
 local sumneko_root_path = DATA_PATH .. "/lspinstall/lua"
 local sumneko_binary = sumneko_root_path .. "/sumneko-lua-language-server"
 
-require'lspconfig'.sumneko_lua.setup {
+pcall(function() return require'lspconfig'.sumneko_lua.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
     root_dir = function()
         return vim.loop.cwd()
@@ -29,4 +29,4 @@ require'lspconfig'.sumneko_lua.setup {
             }
         }
     }
-}
+} end)

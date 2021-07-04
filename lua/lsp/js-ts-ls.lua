@@ -8,7 +8,7 @@
 -- require'illuminate'.on_attach(client)
 -- end
 
-require'lspconfig'.tsserver.setup {
+pcall(function() return require'lspconfig'.tsserver.setup {
     -- cmd = { "typescript-language-server", "--stdio"},
     cmd = {DATA_PATH .. "/lspinstall/typescript/node_modules/.bin/typescript-language-server", "--stdio"},
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
@@ -26,4 +26,4 @@ require'lspconfig'.tsserver.setup {
 
         })
     }
-}
+} end)

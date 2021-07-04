@@ -28,9 +28,9 @@ return require("packer").startup(
     -- use {"windwp/nvim-ts-autotag"} -- Auto insert matching html tags.
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- incremental parser
 
-    -- use {"lervag/vimtex"}
-    -- use {'KeitaNakamura/tex-conceal.vim', ft={'tex'}} -- No Need
-    -- use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
+    use {"lervag/vimtex"}
+    use {'KeitaNakamura/tex-conceal.vim', ft={'tex'}} -- No Need
+    use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
 
     use "kyazdani42/nvim-web-devicons" -- Just filetype icons
     use {"glepnir/galaxyline.nvim"} -- bottom line
@@ -58,9 +58,9 @@ return require("packer").startup(
     use "tpope/vim-surround"
 
     use {"vim-test/vim-test"} -- Test suite
-    use {"mfussenegger/nvim-dap"}
-    use "theHamsta/nvim-dap-virtual-text"
-    use "mfussenegger/nvim-dap-python"
+    -- use {"mfussenegger/nvim-dap"}
+    -- use "theHamsta/nvim-dap-virtual-text"
+    -- use "mfussenegger/nvim-dap-python"
     -- use "bfredl/nvim-ipy"
     -- use "jpalardy/vim-slime"
     -- use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
@@ -75,7 +75,6 @@ return require("packer").startup(
 
     use {"mcmartelle/vim-monokai-bold"}
 
-    -- pcall(function() return vim.cmd("colorscheme monokai-bold") end)
     -- use {"ParamagicDev/vim-medic_chalk"} -- colorscheme
     -- vim.cmd'colorscheme medic_chalk'
 
@@ -93,7 +92,7 @@ return require("packer").startup(
     require("config.galaxyline")
     require("config.gitsigns")
     -- require("config.flutter-tools")
-    require("config.nvim-dap")
+    -- require("config.nvim-dap")
     require("config.dashboard")
     -- require("config.vim-slime")
     require("lsp")
