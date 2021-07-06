@@ -1,3 +1,4 @@
+
 local g = vim.g
 
 g.maplocalleader=' '
@@ -5,7 +6,7 @@ g.maplocalleader=' '
 
 vim.o.guifont = "JuliaMono Regular:h9"
 vim.wo.conceallevel=2
-vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")
+vim.api.nvim_command("autocmd ColorScheme * Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")
 g.tex_flavor='latex'
 g.vimtex_view_method='zathura'
 g.vimtex_fold_enabled=1
@@ -30,4 +31,18 @@ table.insert(vimtex_syntax_custom_cmds,{name= 'Naturals', mathmode= 1, concealch
 table.insert(vimtex_syntax_custom_cmds,{name= 'Integers', mathmode= 1, concealchar= 'ℤ'})
 table.insert(vimtex_syntax_custom_cmds,{name= 'ones'    , mathmode= 1, concealchar= '𝟙'})
 table.insert(vimtex_syntax_custom_cmds,{name= 'bigO'    , mathmode= 1, concealchar= '𝒪'})
+-- contextList = {}
+-- table.insert(contextList,'itemize')
+-- table.insert(contextList,'enumerate')
+-- vim.fn["vimtex#imaps#add_map"](
+-- {
+--     lhs= "<CR>", 
+--     rhs= "\r\\item ", 
+--     leader= '', 
+--     wrapper= 'vimtex#imaps#wrap_environment',
+--     context= contextList
+-- }
+-- )
+    
 g.vimtex_syntax_custom_cmds=vimtex_syntax_custom_cmds
+
