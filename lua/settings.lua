@@ -20,7 +20,6 @@ vim.o.splitright = true -- Vertical splits will automatically be to the right
 -- vim.wo.t_Co = "256" -- Support 256 colors
 vim.o.conceallevel = 1 -- So that I can see `` in markdown files
 -- vim.cmd('hi Conceal ctermbg=black ctermfg=cyan guibg=black guifg=cyan')
-vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")
 vim.cmd("set ts=4") -- Insert 2 spaces for a tab
 vim.cmd("set sw=4") -- Change the number of space characters inserted for indentation
 vim.cmd("set expandtab") -- Converts tabs to spaces
@@ -46,3 +45,4 @@ vim.o.guifont = "UbuntuMono Nerd Font Regular:h17"
 vim.g.conda_startup_msg_suppress = 1
 -- vim.cmd("colorscheme monokai-bold")
 pcall(function() return vim.cmd("colorscheme monokai-bold") end)
+vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")
