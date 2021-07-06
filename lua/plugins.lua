@@ -23,12 +23,13 @@ return require("packer").startup(
     use "windwp/nvim-autopairs" -- Auto insert matching pair for brackets
     use "hrsh7th/vim-vsnip" -- Custom snippets
     use "rafamadriz/friendly-snippets" -- Some generic snippets
+    use 'SirVer/ultisnips'
 
     use {"kevinhwang91/nvim-bqf"} -- Quickfix window???
     -- use {"windwp/nvim-ts-autotag"} -- Auto insert matching html tags.
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"} -- incremental parser
 
-    -- use {"lervag/vimtex"}
+    use {"lervag/vimtex"}
     -- use {'KeitaNakamura/tex-conceal.vim', ft={'tex'}} -- No Need
     -- use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
 
@@ -84,7 +85,7 @@ return require("packer").startup(
     require("config.nvim-compe")
     require("config.treesitter")
     require("config.autopairs")
-    -- require("config.vimtex")
+    require("config.vimtex")
     require("config.which-key")
     require("config.nvim-comment")
     require("config.nvim-tree")
@@ -94,6 +95,7 @@ return require("packer").startup(
     require("config.nvim-dap")
     require("config.dashboard")
     require("config.vim-slime")
+    require("config.ultisnips")
     require("lsp")
   end
 )

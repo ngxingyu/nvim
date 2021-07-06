@@ -30,4 +30,17 @@ table.insert(vimtex_syntax_custom_cmds,{name= 'Naturals', mathmode= 1, concealch
 table.insert(vimtex_syntax_custom_cmds,{name= 'Integers', mathmode= 1, concealchar= 'ℤ'})
 table.insert(vimtex_syntax_custom_cmds,{name= 'ones'    , mathmode= 1, concealchar= '𝟙'})
 table.insert(vimtex_syntax_custom_cmds,{name= 'bigO'    , mathmode= 1, concealchar= '𝒪'})
+-- contextList = {}
+-- table.insert(contextList,'itemize')
+-- table.insert(contextList,'enumerate')
+-- vim.fn["vimtex#imaps#add_map"](
+-- {
+--     lhs= "<CR>", 
+--     rhs= "\r\\item ", 
+--     leader= '', 
+--     wrapper= 'vimtex#imaps#wrap_environment',
+--     context= contextList
+-- }
+-- )
+    
 g.vimtex_syntax_custom_cmds=vimtex_syntax_custom_cmds
