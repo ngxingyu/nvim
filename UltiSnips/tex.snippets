@@ -84,8 +84,12 @@ snippet item "Itemize" bA
 endsnippet
 
 context "env('itemize')"
+snippet it "Item" bA
+\item $0
+endsnippet
+
 context "env('enumerate')"
-snippet item "Item" bA
+snippet it "Item" bA
 \item $0
 endsnippet
 
@@ -538,11 +542,11 @@ snippet inn "in " iA
 \in 
 endsnippet
 
-snippet NN "n" iA
-\N
+snippet bb "n" iA
+\mathbb{$1} $0
 endsnippet
 
-snippet Nn "cap" iA
+snippet NN "cap" iA
 \cap 
 endsnippet
 
@@ -560,18 +564,6 @@ endsnippet
 
 snippet OO "emptyset" iA
 \O
-endsnippet
-
-snippet RR "real" iA
-\R
-endsnippet
-
-snippet QQ "Q" iA
-\Q
-endsnippet
-
-snippet ZZ "Z" iA
-\Z
 endsnippet
 
 snippet <! "normal" iA
@@ -641,15 +633,6 @@ endsnippet
 
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
-endsnippet
-
-
-snippet HH "H" iA
-\mathbb{H}
-endsnippet
-
-snippet DD "D" iA
-\mathbb{D}
 endsnippet
 
 # vim:ft=snippets
