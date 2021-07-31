@@ -17,6 +17,7 @@ O = {
             "html",
             "css",
             "bash",
+<<<<<<< HEAD
             "lua",
             "json",
             "python",
@@ -24,6 +25,15 @@ O = {
             "dart",
             "typescript",
             "vue",
+=======
+            -- "lua",
+            -- "json",
+            -- "python",
+            -- "svelte",
+            -- "dart",
+            -- "typescript",
+            -- "vue",
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
             "yaml",
             "cpp"
         },

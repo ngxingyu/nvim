@@ -2,6 +2,10 @@
 local remap = vim.api.nvim_set_keymap
 local npstatus, npairs = pcall(function() return require('nvim-autopairs')end)
 local status, Rule = pcall(function() return require('nvim-autopairs.rule')end)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
 -- skip it, if you use another global object
 _G.MUtils= {}
 
@@ -22,12 +26,21 @@ end
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
 if npstatus then npairs.setup({
+<<<<<<< HEAD
   check_ts = true,
   ts_config = {
       lua = {'string'},-- it will not add pair on that treesitter node
       javascript = {'template_string'},
       java = false,-- don't check treesitter on java
   }
+=======
+    check_ts = true,
+    ts_config = {
+        lua = {'string'},-- it will not add pair on that treesitter node
+        javascript = {'template_string'},
+        java = false,-- don't check treesitter on java
+    }
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
 }) end
 
 -- require('nvim-treesitter.configs').setup {
