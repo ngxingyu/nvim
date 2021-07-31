@@ -99,6 +99,13 @@ snippet desc "Description" b
 \end{description}
 endsnippet
 
+snippet define "Definition" b
+\begin{definition}[$1]
+	$2
+\end{definition}
+$0
+endsnippet
+
 snippet pac "Package" b
 \usepackage[${1:options}]{${2:package}}$0
 endsnippet
@@ -531,6 +538,11 @@ endsnippet
 context "math()"
 snippet cc "subset" Ai
 \subset 
+endsnippet
+
+context "math()"
+snippet c= "subset" Ai
+\subseteq
 endsnippet
 
 snippet notin "not in " iA
