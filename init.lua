@@ -5,18 +5,11 @@ require('config') -- All plugin configurations
 require('mappings') -- shortcuts
 vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
 require('lsp') -- LSP configs
-<<<<<<< HEAD
-require('lsp.lua-ls')
-require('lsp.efm-ls')
-require('lsp.html-ls')
--- require('lsp.latex-ls')
-=======
 -- require('lsp.lua-ls')
 -- require('lsp.efm-ls')
 -- require('lsp.html-ls')
 require('lsp.latex-ls')
 -- require('lsp.efm-general-ls')
->>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
 -- require('lsp.angular-ls')
 require('lsp.bash-ls')
 -- require('lsp.clangd')
@@ -30,13 +23,8 @@ require('lsp.css-ls')
 require('lsp.json-ls')
 require('lsp.js-ts-ls')
 -- require('lsp.kotlin-ls')
-<<<<<<< HEAD
-require('lsp.php-ls')
-require('lsp.python-ls')
-=======
 -- require('lsp.php-ls')
 -- require('lsp.python-ls')
->>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
 -- require('lsp.ruby-ls')
 -- require('lsp.rust-ls')
 require('lsp.svelte-ls')

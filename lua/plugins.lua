@@ -75,11 +75,8 @@ return require("packer").startup(
     use "dhruvasagar/vim-table-mode"
 
     use {"mcmartelle/vim-monokai-bold"}
-<<<<<<< HEAD
-=======
 
     -- pcall(function() return vim.cmd("colorscheme monokai-bold") end)
->>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
     -- use {"ParamagicDev/vim-medic_chalk"} -- colorscheme
     -- vim.cmd'colorscheme medic_chalk'
 
@@ -99,11 +96,7 @@ return require("packer").startup(
     -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("config.dashboard")
-<<<<<<< HEAD
-    require("config.vim-slime")
-=======
     -- require("config.vim-slime")
->>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
     require("config.ultisnips")
     require("lsp")
   end
