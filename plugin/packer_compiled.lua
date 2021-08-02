@@ -173,10 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-monokai-bold"
   },
-  ["vim-slime"] = {
-    loaded = true,
-    path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-slime"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/ngxingyu/.local/share/nvim/site/pack/packer/start/vim-surround"

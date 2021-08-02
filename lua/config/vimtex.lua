@@ -1,3 +1,4 @@
+
 local g = vim.g
 
 g.maplocalleader=' '
@@ -44,3 +45,4 @@ table.insert(vimtex_syntax_custom_cmds,{name= 'bigO'    , mathmode= 1, concealch
 -- )
     
 g.vimtex_syntax_custom_cmds=vimtex_syntax_custom_cmds
+

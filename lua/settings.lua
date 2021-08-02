@@ -43,5 +43,9 @@ vim.o.guifont = "UbuntuMono Nerd Font Regular:h17"
 -- vim.o.guifont = "SauceCodePro Nerd Font:h17"
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
 vim.g.conda_startup_msg_suppress = 1
+<<<<<<< HEAD
+=======
+-- vim.cmd("colorscheme monokai-bold")
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
 pcall(function() return vim.cmd("colorscheme monokai-bold") end)
 vim.cmd("highlight Conceal ctermbg=65 ctermfg=cyan guibg=65 guifg=cyan")

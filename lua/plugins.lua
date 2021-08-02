@@ -31,7 +31,7 @@ return require("packer").startup(
 
     use {"lervag/vimtex"}
     -- use {'KeitaNakamura/tex-conceal.vim', ft={'tex'}} -- No Need
-    -- use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
+    use {"iamcco/markdown-preview.nvim", run = ":call mkdp#util#install()"}
 
     use "kyazdani42/nvim-web-devicons" -- Just filetype icons
     use {"glepnir/galaxyline.nvim"} -- bottom line
@@ -63,8 +63,8 @@ return require("packer").startup(
     use "theHamsta/nvim-dap-virtual-text"
     use "mfussenegger/nvim-dap-python"
     -- use "bfredl/nvim-ipy"
-    use "jpalardy/vim-slime"
-    use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
+    -- use "jpalardy/vim-slime"
+    -- use {"cjrh/vim-conda", disable=true, ft={"py"}, opt=true}
     -- use "sakhnik/nvim-gdb"
 
     -- use {"akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim"}
@@ -75,6 +75,11 @@ return require("packer").startup(
     use "dhruvasagar/vim-table-mode"
 
     use {"mcmartelle/vim-monokai-bold"}
+<<<<<<< HEAD
+=======
+
+    -- pcall(function() return vim.cmd("colorscheme monokai-bold") end)
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
     -- use {"ParamagicDev/vim-medic_chalk"} -- colorscheme
     -- vim.cmd'colorscheme medic_chalk'
 
@@ -94,7 +99,11 @@ return require("packer").startup(
     -- require("config.flutter-tools")
     require("config.nvim-dap")
     require("config.dashboard")
+<<<<<<< HEAD
     require("config.vim-slime")
+=======
+    -- require("config.vim-slime")
+>>>>>>> 5c32a33a8271b25f26fd81a3693bbd90eec8be40
     require("config.ultisnips")
     require("lsp")
   end
