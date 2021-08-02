@@ -18,6 +18,8 @@ snippet template "Basic template" b
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+%\usepackage{listings}
+%\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
 \usepackage[dutch]{babel}
 \usepackage{amsmath, amssymb}
 
@@ -25,15 +27,12 @@ snippet template "Basic template" b
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
-\pdfminorversion=7
 \usepackage{pdfpages}
 \usepackage{transparent}
 \newcommand{\incfig}[1]{%
 	\def\svgwidth{\columnwidth}
 	\import{./figures/}{#1.pdf_tex}
 }
-
-\pdfsuppresswarningpagegroup=1
 
 \begin{document}
     $0
@@ -50,6 +49,9 @@ priority 100
 snippet ... "ldots" iA
 \ldots
 endsnippet
+
+snippet lstinput "lstinputlisting" bA
+\\lstinputlisting[language=$1, caption=$2]{$3}
 
 snippet table "Table environment" b
 \begin{table}[${1:htpb}]
