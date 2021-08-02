@@ -14,13 +14,23 @@ endglobal
 
 snippet template "Basic template" b
 \documentclass[a4paper]{article}
-
+\usepackage[margin=0.8in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-%\usepackage{listings}
-%\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
-\usepackage[dutch]{babel}
+\usepackage{listings}
+\lstset{numbers=left, 
+    numberstyle=\tiny, 
+    stepnumber=1, numbersep=5pt,
+    tabsize=2,
+	showstringspaces=false,
+	breaklines=true,
+	commentstyle=\color{magenta},
+	keywordstyle=\color{orange},
+	numberstyle=\color{gray},
+	stringstyle=\color{red},
+    basicstyle=\ttfamily}
+\usepackage[english]{babel}
 \usepackage{amsmath, amssymb}
 
 
@@ -33,8 +43,10 @@ snippet template "Basic template" b
 	\def\svgwidth{\columnwidth}
 	\import{./figures/}{#1.pdf_tex}
 }
+\title{}
 
 \begin{document}
+\maketitle
     $0
 \end{document}
 endsnippet
@@ -48,6 +60,13 @@ endsnippet
 priority 100
 snippet ... "ldots" iA
 \ldots
+endsnippet
+
+snippet lstlisting "lstlisting" bA
+\\begin{lstlisting}[language=$1, caption=$2]
+$3
+\\end{lstlisting}
+$0
 endsnippet
 
 snippet lstinput "lstinputlisting" bA
